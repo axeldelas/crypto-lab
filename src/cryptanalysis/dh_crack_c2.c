@@ -165,7 +165,7 @@ void key_update(int *i, float *best_distance, float d, byte best_key[], byte key
   }
   else {
     if (d<*best_distance) {
-      printf(" ==> Better than %s key\n", best_key);
+      printf(" ==> Better than key %s\n", best_key);
       best_key_update(best_distance, d, best_key, key);
     }
     else
