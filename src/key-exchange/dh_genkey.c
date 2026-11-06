@@ -4,13 +4,22 @@
 /// \brief Traitement des balises en fonction de l'option souhaitée ou non par l'utilisateur.
 
 #include "dh.h"
-#include "../Balises/dh_bal.h"
 
-void help_message(void) {
+void help_message(const char *program_name) {
 /// \brief Message d'affichage si utilisation de la balise -h (-help)
-  printf("Usage : dh_genkey [OPTION] [FILENAME]\n");
-  printf("Diffie-Hellman protocol.\n");
-  printf("\n  -o filename\t\tfile crypted message source\n");
+  fprintf(stderr,
+        "Usage: %s -o <output_file>\n\n"
+
+        "Options:\n"
+        "  -o <output_file>\n"
+        "        Output file where the generated Diffie-Hellman parameters\n"
+        "        and keys will be written.\n\n"
+
+        "Examples:\n"
+        "  %s -o dh_keys.txt\n",
+        program_name,
+        program_name
+    );
 }
 
 int main(int argc, char **argv) {
@@ -27,7 +36,7 @@ int main(int argc, char **argv) {
   if (argc==1)
     generate_shared_key(MIN_PRIME, MAX_PRIME);
   else if (has_h_beacon(argc, argv))
-    help_message();
+    help_message(argv[0]);
   else if (has_o_beacon(argc, argv)) {
     p=genPrimeSophieGermain(MIN_PRIME, MAX_PRIME, &cpt);
     g=seek_generator(3, p);
