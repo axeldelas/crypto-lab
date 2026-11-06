@@ -1,0 +1,3 @@
+Génération de la clé partagée
+p=5415479
+g=11 d'ordre 1
