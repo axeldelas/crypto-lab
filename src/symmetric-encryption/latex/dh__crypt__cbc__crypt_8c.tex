@@ -1,0 +1,113 @@
+\doxysection{dh\+\_\+crypt\+\_\+cbc\+\_\+crypt.\+c File Reference}
+\hypertarget{dh__crypt__cbc__crypt_8c}{}\label{dh__crypt__cbc__crypt_8c}\index{dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}}
+
+
+Cipher Cbc algorithm.  
+
+
+{\ttfamily \#include "{}dh\+\_\+crypt.\+h"{}}\newline
+Include dependency graph for dh\+\_\+crypt\+\_\+cbc\+\_\+crypt.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{dh__crypt__cbc__crypt_8c_a225acbff6c7278089b6f18e397744b41}{blocks\+\_\+nb}} (FILE \texorpdfstring{$\ast$}{*}filemsg)
+\item 
+void \mbox{\hyperlink{dh__crypt__cbc__crypt_8c_af74d9d061ecccec847118bb4bf56a003}{block\+\_\+add}} (block\+\_\+t block, FILE \texorpdfstring{$\ast$}{*}filemsg)
+\item 
+void \mbox{\hyperlink{dh__crypt__cbc__crypt_8c_af3bbb4c2bf0d4214f2c8f72218fb1d66}{plaintext\+\_\+recover}} (FILE \texorpdfstring{$\ast$}{*}plaintext\+\_\+filename, block\+\_\+t plaintext)
+\item 
+void \mbox{\hyperlink{dh__crypt__cbc__crypt_8c_a58f58cd8fac488034eb09a353011531c}{encryption\+\_\+block}} (block\+\_\+t plaintext, block\+\_\+t init\+\_\+vec, char key\mbox{[}$\,$\mbox{]}, int key\+\_\+size)
+\item 
+void \mbox{\hyperlink{dh__crypt__cbc__crypt_8c_aeac085d6e533dff9fe6659425dba05fb}{cbc\+\_\+crypt}} (char plaintext\+\_\+filename\mbox{[}$\,$\mbox{]}, char cipher\+\_\+filename\mbox{[}$\,$\mbox{]}, char key\mbox{[}$\,$\mbox{]}, char init\+\_\+vec\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cipher Cbc algorithm. 
+
+\begin{DoxyAuthor}{Author}
+Axel Delas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dh__crypt__cbc__crypt_8c_af74d9d061ecccec847118bb4bf56a003}\label{dh__crypt__cbc__crypt_8c_af74d9d061ecccec847118bb4bf56a003} 
+\index{dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}!block\_add@{block\_add}}
+\index{block\_add@{block\_add}!dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}}
+\doxysubsubsection{\texorpdfstring{block\_add()}{block\_add()}}
+{\footnotesize\ttfamily void block\+\_\+add (\begin{DoxyParamCaption}\item[{block\+\_\+t}]{block,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{filemsg }\end{DoxyParamCaption})}
+
+Append in the file the block given 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em block} & Table containing the block \\
+\hline
+\mbox{\texttt{ in}}  & {\em filemsg} & File to append the block\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crypt__cbc__crypt_8c_a225acbff6c7278089b6f18e397744b41}\label{dh__crypt__cbc__crypt_8c_a225acbff6c7278089b6f18e397744b41} 
+\index{dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}!blocks\_nb@{blocks\_nb}}
+\index{blocks\_nb@{blocks\_nb}!dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}}
+\doxysubsubsection{\texorpdfstring{blocks\_nb()}{blocks\_nb()}}
+{\footnotesize\ttfamily int blocks\+\_\+nb (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{filemsg }\end{DoxyParamCaption})}
+
+Number of blocks containing in the file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filemsg} & Source file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entire representing the number of blocks
+\end{DoxyReturn}
+\Hypertarget{dh__crypt__cbc__crypt_8c_aeac085d6e533dff9fe6659425dba05fb}\label{dh__crypt__cbc__crypt_8c_aeac085d6e533dff9fe6659425dba05fb} 
+\index{dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}!cbc\_crypt@{cbc\_crypt}}
+\index{cbc\_crypt@{cbc\_crypt}!dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}}
+\doxysubsubsection{\texorpdfstring{cbc\_crypt()}{cbc\_crypt()}}
+{\footnotesize\ttfamily void cbc\+\_\+crypt (\begin{DoxyParamCaption}\item[{char}]{plaintext\+\_\+filename\mbox{[}$\,$\mbox{]},  }\item[{char}]{cipher\+\_\+filename\mbox{[}$\,$\mbox{]},  }\item[{char}]{key\mbox{[}$\,$\mbox{]},  }\item[{char}]{init\+\_\+vec\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Cbc algorithm on a source file to destination file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em plaintext\+\_\+filename} & Source file containing the decipher text \\
+\hline
+\mbox{\texttt{ in}}  & {\em cipher\+\_\+filename} & Destination file which will containing the cipher text \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Encryption key \\
+\hline
+\mbox{\texttt{ in}}  & {\em init\+\_\+vec} & Initialisation vector\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crypt__cbc__crypt_8c_a58f58cd8fac488034eb09a353011531c}\label{dh__crypt__cbc__crypt_8c_a58f58cd8fac488034eb09a353011531c} 
+\index{dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}!encryption\_block@{encryption\_block}}
+\index{encryption\_block@{encryption\_block}!dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}}
+\doxysubsubsection{\texorpdfstring{encryption\_block()}{encryption\_block()}}
+{\footnotesize\ttfamily void encryption\+\_\+block (\begin{DoxyParamCaption}\item[{block\+\_\+t}]{plaintext,  }\item[{block\+\_\+t}]{init\+\_\+vec,  }\item[{char}]{key\mbox{[}$\,$\mbox{]},  }\item[{int}]{key\+\_\+size }\end{DoxyParamCaption})}
+
+Cbc algorithm on a file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em plaintext} & Table containing the decipher block \\
+\hline
+\mbox{\texttt{ in}}  & {\em init\+\_\+vec} & Table containing the precedent cipher block \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Encryption key \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+size} & Key size\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crypt__cbc__crypt_8c_af3bbb4c2bf0d4214f2c8f72218fb1d66}\label{dh__crypt__cbc__crypt_8c_af3bbb4c2bf0d4214f2c8f72218fb1d66} 
+\index{dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}!plaintext\_recover@{plaintext\_recover}}
+\index{plaintext\_recover@{plaintext\_recover}!dh\_crypt\_cbc\_crypt.c@{dh\_crypt\_cbc\_crypt.c}}
+\doxysubsubsection{\texorpdfstring{plaintext\_recover()}{plaintext\_recover()}}
+{\footnotesize\ttfamily void plaintext\+\_\+recover (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{plaintext\+\_\+filename,  }\item[{block\+\_\+t}]{plaintext }\end{DoxyParamCaption})}
+
+Recover a plaintext block from the file
+
+Append padding caracters if the plaintext block is not full 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em plaintext\+\_\+filename} & File to recover the plaintext block \\
+\hline
+\mbox{\texttt{ in}}  & {\em plaintext} & Table which will containing the block\\
+\hline
+\end{DoxyParams}

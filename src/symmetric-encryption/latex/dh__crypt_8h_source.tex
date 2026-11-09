@@ -1,0 +1,36 @@
+\doxysection{dh\+\_\+crypt.\+h}
+\hypertarget{dh__crypt_8h_source}{}\label{dh__crypt_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DH\_CRYPT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DH\_CRYPT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ BLOCK\_SIZE\ 16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Block\ size\ for\ Cbc\ algorithm}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ byte;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Byte}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{byte}\ block\_t[BLOCK\_SIZE];\ \ \ \ \ \ \ \textcolor{comment}{//\ Cbc\ block}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <assert.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Xor\ program}}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ xor(\textcolor{keywordtype}{char}\ plaintext\_filename[],\ \textcolor{keywordtype}{char}\ cipher\_filename[],\ \textcolor{keywordtype}{char}\ key[]);}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Functions\ used\ for\ cipher\ and\ decipher\ Cbc\ algorithm}}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ blocks\_nb(FILE\ *filemsg);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ block\_add(block\_t\ block,\ FILE\ *filemsg);}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Cipher\ Cbc\ program}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ plaintext\_recover(FILE\ *plaintext\_filename,\ block\_t\ plaintext);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ encryption\_block(block\_t\ plaintext,\ block\_t\ init\_vec,\ \textcolor{keywordtype}{char}\ key[],\ \textcolor{keywordtype}{int}\ key\_size);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ cbc\_crypt(\textcolor{keywordtype}{char}\ plaintext\_filename[],\ \textcolor{keywordtype}{char}\ cipher\_filename[],\ \textcolor{keywordtype}{char}\ key[],\ \textcolor{keywordtype}{char}\ init\_vec[]);}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Decipher\ Cbc\ program}}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ ciphertext\_recover(FILE\ *cipher\_filemsg,\ block\_t\ ciphertext);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ decryption\_block(block\_t\ ciphertext,\ block\_t\ init\_vec,\ \textcolor{keywordtype}{char}\ key[],\ \textcolor{keywordtype}{int}\ key\_size);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ last\_byte\_ind(block\_t\ ciphertext);}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ last\_block\_add(block\_t\ ciphertext,\ FILE\ *decipher\_filemsg);}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ cbc\_uncrypt(\textcolor{keywordtype}{char}\ cipher\_filename[],\ \textcolor{keywordtype}{char}\ decipher\_filename[],\ \textcolor{keywordtype}{char}\ key[],\ \textcolor{keywordtype}{char}\ init\_vec[]);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

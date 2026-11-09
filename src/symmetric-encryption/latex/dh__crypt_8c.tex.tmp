@@ -1,0 +1,55 @@
+\doxysection{dh\+\_\+crypt.\+c File Reference}
+\hypertarget{dh__crypt_8c}{}\label{dh__crypt_8c}\index{dh\_crypt.c@{dh\_crypt.c}}
+
+
+Beacons treatment depending on user parameters choice or error message.  
+
+
+{\ttfamily \#include "{}dh\+\_\+crypt.\+h"{}}\newline
+Include dependency graph for dh\+\_\+crypt.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dh__crypt_8c_a51681f7dfe182d038fc897f4f336a048}{help\+\_\+message}} (const char \texorpdfstring{$\ast$}{*}program\+\_\+name)
+\item 
+int \mbox{\hyperlink{dh__crypt_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Beacons treatment depending on user parameters choice or error message. 
+
+\begin{DoxyAuthor}{Author}
+Axel Delas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dh__crypt_8c_a51681f7dfe182d038fc897f4f336a048}\label{dh__crypt_8c_a51681f7dfe182d038fc897f4f336a048} 
+\index{dh\_crypt.c@{dh\_crypt.c}!help\_message@{help\_message}}
+\index{help\_message@{help\_message}!dh\_crypt.c@{dh\_crypt.c}}
+\doxysubsubsection{\texorpdfstring{help\_message()}{help\_message()}}
+{\footnotesize\ttfamily void help\+\_\+message (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{program\+\_\+name }\end{DoxyParamCaption})}
+
+Error message to print\Hypertarget{dh__crypt_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{dh__crypt_8c_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{dh\_crypt.c@{dh\_crypt.c}!main@{main}}
+\index{main@{main}!dh\_crypt.c@{dh\_crypt.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+Beacons treatment with user parameters
+
+Looking and save beacons informations 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & Number of parameters \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & Table contening parameters informations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Code 0
+\end{DoxyReturn}

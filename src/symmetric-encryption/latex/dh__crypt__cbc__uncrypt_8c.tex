@@ -1,0 +1,111 @@
+\doxysection{dh\+\_\+crypt\+\_\+cbc\+\_\+uncrypt.\+c File Reference}
+\hypertarget{dh__crypt__cbc__uncrypt_8c}{}\label{dh__crypt__cbc__uncrypt_8c}\index{dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}}
+
+
+Decipher Cbc algorithm.  
+
+
+{\ttfamily \#include "{}dh\+\_\+crypt.\+h"{}}\newline
+Include dependency graph for dh\+\_\+crypt\+\_\+cbc\+\_\+uncrypt.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dh__crypt__cbc__uncrypt_8c_a65b2d778298922a568a778f021876ff7}{ciphertext\+\_\+recover}} (FILE \texorpdfstring{$\ast$}{*}cipher\+\_\+filemsg, block\+\_\+t ciphertext)
+\item 
+void \mbox{\hyperlink{dh__crypt__cbc__uncrypt_8c_a485bbc0c67508a7ac66a0675847f3cb4}{decryption\+\_\+block}} (block\+\_\+t ciphertext, block\+\_\+t init\+\_\+vec, char key\mbox{[}$\,$\mbox{]}, int key\+\_\+size)
+\item 
+int \mbox{\hyperlink{dh__crypt__cbc__uncrypt_8c_a904b7d63d3ed4b6ffc1b4ea53ca96073}{last\+\_\+byte\+\_\+ind}} (block\+\_\+t ciphertext)
+\item 
+void \mbox{\hyperlink{dh__crypt__cbc__uncrypt_8c_abaa4522d1204a6697da8a674ca7e54ca}{last\+\_\+block\+\_\+add}} (block\+\_\+t ciphertext, FILE \texorpdfstring{$\ast$}{*}decipher\+\_\+filemsg)
+\item 
+void \mbox{\hyperlink{dh__crypt__cbc__uncrypt_8c_aea6815d7085bfd509e5cbc16650a852b}{cbc\+\_\+uncrypt}} (char cipher\+\_\+filename\mbox{[}$\,$\mbox{]}, char decipher\+\_\+filename\mbox{[}$\,$\mbox{]}, char key\mbox{[}$\,$\mbox{]}, char init\+\_\+vec\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Decipher Cbc algorithm. 
+
+\begin{DoxyAuthor}{Author}
+Axel Delas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dh__crypt__cbc__uncrypt_8c_aea6815d7085bfd509e5cbc16650a852b}\label{dh__crypt__cbc__uncrypt_8c_aea6815d7085bfd509e5cbc16650a852b} 
+\index{dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}!cbc\_uncrypt@{cbc\_uncrypt}}
+\index{cbc\_uncrypt@{cbc\_uncrypt}!dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}}
+\doxysubsubsection{\texorpdfstring{cbc\_uncrypt()}{cbc\_uncrypt()}}
+{\footnotesize\ttfamily void cbc\+\_\+uncrypt (\begin{DoxyParamCaption}\item[{char}]{cipher\+\_\+filename\mbox{[}$\,$\mbox{]},  }\item[{char}]{decipher\+\_\+filename\mbox{[}$\,$\mbox{]},  }\item[{char}]{key\mbox{[}$\,$\mbox{]},  }\item[{char}]{init\+\_\+vec\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Cbc decipher algorithm on a file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cipher\+\_\+filename} & Source file containing the cipher text \\
+\hline
+\mbox{\texttt{ in}}  & {\em decipher\+\_\+filename} & Destination file which will containing the decipher text \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Encryption key \\
+\hline
+\mbox{\texttt{ in}}  & {\em init\+\_\+vec} & Initialisation vector\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crypt__cbc__uncrypt_8c_a65b2d778298922a568a778f021876ff7}\label{dh__crypt__cbc__uncrypt_8c_a65b2d778298922a568a778f021876ff7} 
+\index{dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}!ciphertext\_recover@{ciphertext\_recover}}
+\index{ciphertext\_recover@{ciphertext\_recover}!dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}}
+\doxysubsubsection{\texorpdfstring{ciphertext\_recover()}{ciphertext\_recover()}}
+{\footnotesize\ttfamily void ciphertext\+\_\+recover (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{cipher\+\_\+filemsg,  }\item[{block\+\_\+t}]{ciphertext }\end{DoxyParamCaption})}
+
+Recover cipher text block 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cipher\+\_\+filemsg} & Source file containing the cipher text \\
+\hline
+\mbox{\texttt{ in}}  & {\em plaintext} & Table which will containing the recovered ciper text block\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crypt__cbc__uncrypt_8c_a485bbc0c67508a7ac66a0675847f3cb4}\label{dh__crypt__cbc__uncrypt_8c_a485bbc0c67508a7ac66a0675847f3cb4} 
+\index{dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}!decryption\_block@{decryption\_block}}
+\index{decryption\_block@{decryption\_block}!dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}}
+\doxysubsubsection{\texorpdfstring{decryption\_block()}{decryption\_block()}}
+{\footnotesize\ttfamily void decryption\+\_\+block (\begin{DoxyParamCaption}\item[{block\+\_\+t}]{ciphertext,  }\item[{block\+\_\+t}]{init\+\_\+vec,  }\item[{char}]{key\mbox{[}$\,$\mbox{]},  }\item[{int}]{key\+\_\+size }\end{DoxyParamCaption})}
+
+Cbc decipher algorithm on a block 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em plaintext} & Table containing the cipher block \\
+\hline
+\mbox{\texttt{ in}}  & {\em init\+\_\+vec} & Table containing the precedent decipher block \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Encryption key \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+size} & Key size\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crypt__cbc__uncrypt_8c_abaa4522d1204a6697da8a674ca7e54ca}\label{dh__crypt__cbc__uncrypt_8c_abaa4522d1204a6697da8a674ca7e54ca} 
+\index{dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}!last\_block\_add@{last\_block\_add}}
+\index{last\_block\_add@{last\_block\_add}!dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}}
+\doxysubsubsection{\texorpdfstring{last\_block\_add()}{last\_block\_add()}}
+{\footnotesize\ttfamily void last\+\_\+block\+\_\+add (\begin{DoxyParamCaption}\item[{block\+\_\+t}]{ciphertext,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{decipher\+\_\+filemsg }\end{DoxyParamCaption})}
+
+Append the last decipher block without padding caracters 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ciphertext} & Table containing the last cipher block \\
+\hline
+\mbox{\texttt{ in}}  & {\em decipher\+\_\+filemsg} & File to append the block\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crypt__cbc__uncrypt_8c_a904b7d63d3ed4b6ffc1b4ea53ca96073}\label{dh__crypt__cbc__uncrypt_8c_a904b7d63d3ed4b6ffc1b4ea53ca96073} 
+\index{dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}!last\_byte\_ind@{last\_byte\_ind}}
+\index{last\_byte\_ind@{last\_byte\_ind}!dh\_crypt\_cbc\_uncrypt.c@{dh\_crypt\_cbc\_uncrypt.c}}
+\doxysubsubsection{\texorpdfstring{last\_byte\_ind()}{last\_byte\_ind()}}
+{\footnotesize\ttfamily int last\+\_\+byte\+\_\+ind (\begin{DoxyParamCaption}\item[{block\+\_\+t}]{ciphertext }\end{DoxyParamCaption})}
+
+Last index before padding caracters 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ciphertext} & Table containing the last decipher block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Entire representing the number of bytes before the first padding caracter
+\end{DoxyReturn}
