@@ -1,0 +1,55 @@
+\doxysection{dh\+\_\+genkey.\+c File Reference}
+\hypertarget{dh__genkey_8c}{}\label{dh__genkey_8c}\index{dh\_genkey.c@{dh\_genkey.c}}
+
+
+Traitement des balises en fonction de l\textquotesingle{}option souhaitée ou non par l\textquotesingle{}utilisateur.  
+
+
+{\ttfamily \#include "{}dh.\+h"{}}\newline
+Include dependency graph for dh\+\_\+genkey.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dh__genkey_8c_a51681f7dfe182d038fc897f4f336a048}{help\+\_\+message}} (const char \texorpdfstring{$\ast$}{*}program\+\_\+name)
+\item 
+int \mbox{\hyperlink{dh__genkey_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Traitement des balises en fonction de l\textquotesingle{}option souhaitée ou non par l\textquotesingle{}utilisateur. 
+
+\begin{DoxyAuthor}{Author}
+Axel Delas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+novembre 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dh__genkey_8c_a51681f7dfe182d038fc897f4f336a048}\label{dh__genkey_8c_a51681f7dfe182d038fc897f4f336a048} 
+\index{dh\_genkey.c@{dh\_genkey.c}!help\_message@{help\_message}}
+\index{help\_message@{help\_message}!dh\_genkey.c@{dh\_genkey.c}}
+\doxysubsubsection{\texorpdfstring{help\_message()}{help\_message()}}
+{\footnotesize\ttfamily void help\+\_\+message (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{program\+\_\+name }\end{DoxyParamCaption})}
+
+Message d\textquotesingle{}affichage si utilisation de la balise -\/h (-\/help)\Hypertarget{dh__genkey_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{dh__genkey_8c_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{dh\_genkey.c@{dh\_genkey.c}!main@{main}}
+\index{main@{main}!dh\_genkey.c@{dh\_genkey.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+Traitement de(s) balise(s) et des argument(s)
+
+Recherche de(s) balise(s) pointée(s) par des fonctions du header dh\+\_\+bal.\+h 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & Le nombre de paramètre(s) donné(s) à l\textquotesingle{}exécution du programme. \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & Tableau contenant le(s) paramètre(s) donné(s) à l\textquotesingle{}exécution du programme. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Code de retour 0.
+\end{DoxyReturn}

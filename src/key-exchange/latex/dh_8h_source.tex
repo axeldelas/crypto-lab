@@ -1,0 +1,40 @@
+\doxysection{dh.\+h}
+\hypertarget{dh_8h_source}{}\label{dh_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ DH\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DH\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <assert.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <ctype.h>}\ \textcolor{comment}{//\ opérations\ sur\ les\ caractères}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ MAX\_FACTEURS\ 10\ }\textcolor{comment}{//\ nb\ max\ de\ facteurs\ premiers\ d'un\ nombre}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ BLOCK\_SIZE\ 16\ }\textcolor{comment}{//\ taille\ des\ blocs\ pour\ CBC}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ MAX\_PRIME\ 4294967296/1000\ }\textcolor{comment}{//\ 2\string^32\ =\ sqrt(2\string^64)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ MIN\_PRIME\ 100}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ byte;\ \textcolor{comment}{//\ octet}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{byte}\ block\_t[BLOCK\_SIZE];\ \textcolor{comment}{//\ bloc\ CBC\ :\ un\ octet\ par\ case}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{long}\ random\_long(\textcolor{keywordtype}{long}\ min,\textcolor{keywordtype}{long}\ max);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ rabin(\textcolor{keywordtype}{long}\ a,\ \textcolor{keywordtype}{long}\ n);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{long}\ puissance\_mod\_n(\textcolor{keywordtype}{long}\ a,\ \textcolor{keywordtype}{long}\ e,\ \textcolor{keywordtype}{long}\ n);}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ xor(\textcolor{keywordtype}{char}\ *msg,\ \textcolor{keywordtype}{char}*\ key,\textcolor{keywordtype}{int}\ msg\_length,\textcolor{keywordtype}{char}\ *crypted);}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{long}\ generePremierRabin(\textcolor{keywordtype}{long}\ min,\textcolor{keywordtype}{long}\ max,\textcolor{keywordtype}{int}\ *cpt);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{long}\ seek\_generator(\textcolor{keywordtype}{long}\ start,\textcolor{keywordtype}{long}\ p);}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ nb\_digit\_base10(\textcolor{keywordtype}{long}\ n);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{long}\ generate\_shared\_key(\textcolor{keywordtype}{long}\ min,\textcolor{keywordtype}{long}\ max);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{long}\ genPrimeSophieGermain(\textcolor{keywordtype}{long}\ min,\textcolor{keywordtype}{long}\ max,\textcolor{keywordtype}{int}\ *cpt);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{long}\ xchange\_shared\_key(\textcolor{keywordtype}{long}\ generateur,\ \textcolor{keywordtype}{long}\ premier);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{long}\ int\_pow(\textcolor{keywordtype}{long}\ a,\ \textcolor{keywordtype}{long}\ e);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
