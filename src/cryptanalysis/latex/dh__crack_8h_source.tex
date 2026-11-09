@@ -1,0 +1,62 @@
+\doxysection{dh\+\_\+crack.\+h}
+\hypertarget{dh__crack_8h_source}{}\label{dh__crack_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CRACK\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CRACK\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <ctype.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ \ MAX\_SIZE\_KEY\ 8\ \ }\textcolor{comment}{/*\ 7\ +\ '\(\backslash\)0'\ caractères\ max\ dans\ la\ clef\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ \ MAX\_VALID\_KEY\_CHARS\ 10\ }\textcolor{comment}{//\ dix\ caractères\ numériques\ possibles\ pour\ chaque\ caractère\ de\ la\ clef}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \ MAX\_KEYS\ 30000\ }\textcolor{comment}{//\ nombre\ max\ de\ clefs\ potentielles\ gérées}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \ CHAR\_NB\ 10\ }\textcolor{comment}{//\ nombre\ de\ caractères\ maximum\ dans\ un\ digit}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ \ NB\_ALPHABET\ 26\ }\textcolor{comment}{//\ nombre\ de\ lettres\ dans\ l'alphabet\ anglais}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ byte;\ \textcolor{comment}{//\ octet}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ key\_size;\ \textcolor{comment}{//\ longueur\ de\ la\ clef}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{byte}\ **tab\_keys;\ \textcolor{comment}{//\ 2\ dim\ :\ ligne\ i\ =\ liste\ des\ caractères\ admissibles\ pour\ clef[i]}}
+\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{\ \textcolor{comment}{//\ tableau\ des\ mots\ du\ message\ décodé\ pour\ chercher\ dans\ le\ dico}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{byte}\ **words\_tab;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ dim;\ \textcolor{comment}{//\ nombre\ de\ mots}}
+\DoxyCodeLine{00026\ \}\ \mbox{\hyperlink{structt__words__lst}{t\_words\_lst}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Fonctions\ crack\ c1}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ display\_board\_key(\textcolor{keywordtype}{byte}\ keys\_char[],\ \textcolor{keywordtype}{int}\ key\_char\_nb,\ \textcolor{keywordtype}{int}\ digit\_key\_nb);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ display\_all\_board\_keys(\mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys);}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ dynamic\_allocation\_mat(\mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys);}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ del\_char(\textcolor{keywordtype}{byte}\ key\_char[],\ \textcolor{keywordtype}{int}\ c,\ \textcolor{keywordtype}{int}\ *p\_char\_size);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ char\_nb(FILE\ *cypher\_filemsg);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ cypher\_msg\_recover(FILE\ *cypher\_filemsg,\ \textcolor{keywordtype}{byte}\ cypher\_msg[]);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ init\_key(\mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{bool}\ is\_eligible(\textcolor{keywordtype}{byte}\ res);}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ c1\_treatment(\mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys,\ \textcolor{keywordtype}{byte}\ cypher\_msg[],\ \textcolor{keywordtype}{int}\ *p\_char\_size,\ \textcolor{keywordtype}{int}\ bytes\_cypher\_msg\_nb);}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ c1(\textcolor{keywordtype}{char}\ cypher\_filename[],\ \mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys);}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ Fonctions\ crack\ c2}}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ dynamic\_keys\_allocation(\textcolor{keywordtype}{byte}\ **keys\_copy,\ \textcolor{keywordtype}{int}\ nb\_of\_keys,\ \textcolor{keywordtype}{int}\ key\_size);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ digits\_init(\textcolor{keywordtype}{byte}\ digits[],\ \textcolor{keywordtype}{int}\ key\_size);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{bool}\ is\_eligible\_char(\textcolor{keywordtype}{byte}\ c);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ eligible\_char\_nb(\textcolor{keywordtype}{byte}\ char\_key[]);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ next\_digits(\textcolor{keywordtype}{byte}\ digits[],\ \mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys,\ \textcolor{keywordtype}{int}\ nb\_of\_keys,\ \textcolor{keywordtype}{int}\ *tested\_keys\_nb);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ keys\_nb(\mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys);}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ key\_combo\_recover(\mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys,\ \textcolor{keywordtype}{byte}\ digits[],\ \textcolor{keywordtype}{byte}\ key[]);}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ freq\_val\_init(\textcolor{keywordtype}{float}\ freq[]);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{float}\ distance\_calculation(\textcolor{keywordtype}{float}\ freq[],\ \textcolor{keywordtype}{int}\ freq\_th[],\ \textcolor{keywordtype}{int}\ bytes\_cypher\_msg\_nb);}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ occurrence\_calculation(\textcolor{keywordtype}{int}\ bytes\_cypher\_msg\_nb,\ FILE\ *cypher\_filemsg,\ \textcolor{keywordtype}{byte}\ key[],\ \textcolor{keywordtype}{byte}\ alphabet[],\ \textcolor{keywordtype}{float}\ freq[],\ \textcolor{keywordtype}{int}\ key\_size);}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ best\_key\_update(\textcolor{keywordtype}{float}\ *best\_distance,\ \textcolor{keywordtype}{float}\ d,\ \textcolor{keywordtype}{byte}\ best\_key[],\ \textcolor{keywordtype}{byte}\ key[]);}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ key\_update(\textcolor{keywordtype}{int}\ *i,\ \textcolor{keywordtype}{float}\ *best\_distance,\ \textcolor{keywordtype}{float}\ d,\ \textcolor{keywordtype}{byte}\ best\_key[],\ \textcolor{keywordtype}{byte}\ key[],\ \textcolor{keywordtype}{float}\ score\_board[],\ \textcolor{keywordtype}{byte}\ **keys\_copy,\ \textcolor{keywordtype}{int}\ key\_size);}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ ind\_min(\textcolor{keywordtype}{float}\ score\_board[],\ \textcolor{keywordtype}{int}\ nb\_of\_keys);}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ key\_sort(\textcolor{keywordtype}{float}\ score\_board[],\ \textcolor{keywordtype}{byte}\ **keys\_copy,\ \textcolor{keywordtype}{byte}\ **keys\_board,\ \textcolor{keywordtype}{int}\ nb\_of\_keys,\ \textcolor{keywordtype}{int}\ key\_size);}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ c2\_treatment(\textcolor{keywordtype}{int}\ nb\_of\_keys,\ FILE\ *cypher\_filemsg,\ \textcolor{keywordtype}{byte}\ digits[],\ \mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys,\ \textcolor{keywordtype}{byte}\ key[],\ \textcolor{keywordtype}{byte}\ best\_key[],\ \textcolor{keywordtype}{int}\ bytes\_cypher\_msg\_nb,\ \textcolor{keywordtype}{float}\ score\_board[],\ \textcolor{keywordtype}{byte}\ **keys\_copy,\ \textcolor{keywordtype}{byte}\ **keys\_board);}
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ c2(\textcolor{keywordtype}{char}\ cypher\_filename[],\ \mbox{\hyperlink{structt__tab__keys}{t\_tab\_keys}}\ keys);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

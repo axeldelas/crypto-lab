@@ -1,0 +1,181 @@
+\doxysection{dh\+\_\+crack\+\_\+c1.\+c File Reference}
+\hypertarget{dh__crack__c1_8c}{}\label{dh__crack__c1_8c}\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+
+
+Crack par émondage des caractères possible pour la clef sur un fichier donné contenant le message chiffré.  
+
+
+{\ttfamily \#include "{}dh\+\_\+crack.\+h"{}}\newline
+Include dependency graph for dh\+\_\+crack\+\_\+c1.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_a075aa43ac43bd0ba6d3b9cc0817fe1a5}{display\+\_\+board\+\_\+key}} (byte key\+\_\+char\mbox{[}$\,$\mbox{]}, int key\+\_\+char\+\_\+nb, int digit\+\_\+key\+\_\+nb)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_a609f9f259044680ec037b346e206729c}{display\+\_\+all\+\_\+board\+\_\+keys}} (\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_a614542e46c4ef1219c6c497fa89242c3}{dynamic\+\_\+allocation\+\_\+mat}} (\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_a04ef0044e47868932b07899488a11e00}{init\+\_\+key}} (\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_a656fda7190a3f90044b262bf1720494b}{del\+\_\+char}} (byte key\+\_\+char\mbox{[}$\,$\mbox{]}, int k, int \texorpdfstring{$\ast$}{*}p\+\_\+char\+\_\+size)
+\item 
+int \mbox{\hyperlink{dh__crack__c1_8c_aa45fc41f1f916aa0aba7291a1b4f7059}{char\+\_\+nb}} (FILE \texorpdfstring{$\ast$}{*}cypher\+\_\+filemsg)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_ae49aaf1c46c15c1e54c317a4de1377b3}{cypher\+\_\+msg\+\_\+recover}} (FILE \texorpdfstring{$\ast$}{*}cypher\+\_\+filemsg, byte cypher\+\_\+msg\mbox{[}$\,$\mbox{]})
+\item 
+bool \mbox{\hyperlink{dh__crack__c1_8c_af19d4fee5224f84baac3873cd2c54bf7}{is\+\_\+eligible}} (byte res)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_ad73a6b80af7f7545fc6219356fe7470b}{c1\+\_\+treatment}} (\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys, byte cypher\+\_\+msg\mbox{[}$\,$\mbox{]}, int \texorpdfstring{$\ast$}{*}p\+\_\+char\+\_\+size, int bytes\+\_\+cypher\+\_\+msg\+\_\+nb)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_a233969038fa10de309c129376f94add1}{c1}} (char \texorpdfstring{$\ast$}{*}cypher\+\_\+filename, \mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Crack par émondage des caractères possible pour la clef sur un fichier donné contenant le message chiffré. 
+
+\begin{DoxyAuthor}{Author}
+Axel Delas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+novembre 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dh__crack__c1_8c_a233969038fa10de309c129376f94add1}\label{dh__crack__c1_8c_a233969038fa10de309c129376f94add1} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!c1@{c1}}
+\index{c1@{c1}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{c1()}{c1()}}
+{\footnotesize\ttfamily void c1 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{cypher\+\_\+filename,  }\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys }\end{DoxyParamCaption})}
+
+Fonction principale du crack C1 sur un fichier donné. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cypher\+\_\+filename} & Nom du fichier contenant le message chiffré \\
+\hline
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c1_8c_ad73a6b80af7f7545fc6219356fe7470b}\label{dh__crack__c1_8c_ad73a6b80af7f7545fc6219356fe7470b} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!c1\_treatment@{c1\_treatment}}
+\index{c1\_treatment@{c1\_treatment}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{c1\_treatment()}{c1\_treatment()}}
+{\footnotesize\ttfamily void c1\+\_\+treatment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys,  }\item[{byte}]{cypher\+\_\+msg\mbox{[}$\,$\mbox{]},  }\item[{int \texorpdfstring{$\ast$}{*}}]{p\+\_\+char\+\_\+size,  }\item[{int}]{bytes\+\_\+cypher\+\_\+msg\+\_\+nb }\end{DoxyParamCaption})}
+
+Algorithme émondage des caractères possible pour la clef sur un tableau contenant le message chiffré 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés \\
+\hline
+\mbox{\texttt{ in}}  & {\em cypher\+\_\+msg} & Tableau contenant les octets du message chiffré \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+\_\+char\+\_\+size} & Nombre de caractère de la clé ciblée \\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes\+\_\+cypher\+\_\+msg\+\_\+nb} & Nombre d\textquotesingle{}octets du message chiffré\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c1_8c_aa45fc41f1f916aa0aba7291a1b4f7059}\label{dh__crack__c1_8c_aa45fc41f1f916aa0aba7291a1b4f7059} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!char\_nb@{char\_nb}}
+\index{char\_nb@{char\_nb}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{char\_nb()}{char\_nb()}}
+{\footnotesize\ttfamily int char\+\_\+nb (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{cypher\+\_\+filemsg }\end{DoxyParamCaption})}
+
+Nombre d\textquotesingle{}octet(s) dans le fichier contenant le message chiffré 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cypher\+\_\+filemsg} & Fichier contenant le message chiffré \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre d\textquotesingle{}octet(s)
+\end{DoxyReturn}
+\Hypertarget{dh__crack__c1_8c_ae49aaf1c46c15c1e54c317a4de1377b3}\label{dh__crack__c1_8c_ae49aaf1c46c15c1e54c317a4de1377b3} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!cypher\_msg\_recover@{cypher\_msg\_recover}}
+\index{cypher\_msg\_recover@{cypher\_msg\_recover}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{cypher\_msg\_recover()}{cypher\_msg\_recover()}}
+{\footnotesize\ttfamily void cypher\+\_\+msg\+\_\+recover (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{cypher\+\_\+filemsg,  }\item[{byte}]{cypher\+\_\+msg\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Récupération du message chiffré du fichier dans un tableau 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cypher\+\_\+filemsg} & Fichier source contenant le message chiffré \\
+\hline
+\mbox{\texttt{ in}}  & {\em cypher\+\_\+msg} & Tableau contenant le message chiffré\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c1_8c_a656fda7190a3f90044b262bf1720494b}\label{dh__crack__c1_8c_a656fda7190a3f90044b262bf1720494b} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!del\_char@{del\_char}}
+\index{del\_char@{del\_char}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{del\_char()}{del\_char()}}
+{\footnotesize\ttfamily void del\+\_\+char (\begin{DoxyParamCaption}\item[{byte}]{key\+\_\+char\mbox{[}$\,$\mbox{]},  }\item[{int}]{k,  }\item[{int \texorpdfstring{$\ast$}{*}}]{p\+\_\+char\+\_\+size }\end{DoxyParamCaption})}
+
+Suppression du caractère ciblé de la clé 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key\+\_\+char} & Tableau contenant les caractères de la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em k} & Indice du caractère à supprimer \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+\_\+char\+\_\+size} & Nombre de caractères de la clé\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c1_8c_a609f9f259044680ec037b346e206729c}\label{dh__crack__c1_8c_a609f9f259044680ec037b346e206729c} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!display\_all\_board\_keys@{display\_all\_board\_keys}}
+\index{display\_all\_board\_keys@{display\_all\_board\_keys}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{display\_all\_board\_keys()}{display\_all\_board\_keys()}}
+{\footnotesize\ttfamily void display\+\_\+all\+\_\+board\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys }\end{DoxyParamCaption})}
+
+Afficher le(s) caractère(s) de toute(s) les clés 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c1_8c_a075aa43ac43bd0ba6d3b9cc0817fe1a5}\label{dh__crack__c1_8c_a075aa43ac43bd0ba6d3b9cc0817fe1a5} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!display\_board\_key@{display\_board\_key}}
+\index{display\_board\_key@{display\_board\_key}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{display\_board\_key()}{display\_board\_key()}}
+{\footnotesize\ttfamily void display\+\_\+board\+\_\+key (\begin{DoxyParamCaption}\item[{byte}]{key\+\_\+char\mbox{[}$\,$\mbox{]},  }\item[{int}]{key\+\_\+char\+\_\+nb,  }\item[{int}]{digit\+\_\+key\+\_\+nb }\end{DoxyParamCaption})}
+
+Afficher le(s) caractère(s) d\textquotesingle{}une clé 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em key\+\_\+char} & Tableau contenant le(s) caractère(s) de la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+char\+\_\+nb} & Nombre de caractères associé au digit \\
+\hline
+\mbox{\texttt{ in}}  & {\em digit\+\_\+key\+\_\+nb} & Digit de la clé qu\textquotesingle{}on souhaite afficher\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c1_8c_a614542e46c4ef1219c6c497fa89242c3}\label{dh__crack__c1_8c_a614542e46c4ef1219c6c497fa89242c3} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!dynamic\_allocation\_mat@{dynamic\_allocation\_mat}}
+\index{dynamic\_allocation\_mat@{dynamic\_allocation\_mat}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{dynamic\_allocation\_mat()}{dynamic\_allocation\_mat()}}
+{\footnotesize\ttfamily void dynamic\+\_\+allocation\+\_\+mat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys }\end{DoxyParamCaption})}
+
+Allocation dynamique pour une matrice 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c1_8c_a04ef0044e47868932b07899488a11e00}\label{dh__crack__c1_8c_a04ef0044e47868932b07899488a11e00} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!init\_key@{init\_key}}
+\index{init\_key@{init\_key}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{init\_key()}{init\_key()}}
+{\footnotesize\ttfamily void init\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys }\end{DoxyParamCaption})}
+
+Initialisation des caractères de base d\textquotesingle{}une clé 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c1_8c_af19d4fee5224f84baac3873cd2c54bf7}\label{dh__crack__c1_8c_af19d4fee5224f84baac3873cd2c54bf7} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!is\_eligible@{is\_eligible}}
+\index{is\_eligible@{is\_eligible}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{is\_eligible()}{is\_eligible()}}
+{\footnotesize\ttfamily bool is\+\_\+eligible (\begin{DoxyParamCaption}\item[{byte}]{res }\end{DoxyParamCaption})}
+
+Vérification de si l\textquotesingle{}octet est un alphanumérique ou une ponctuation ou un espace 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em res} & Octet à tester \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai ou faux
+\end{DoxyReturn}

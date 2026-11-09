@@ -1,0 +1,330 @@
+\doxysection{dh\+\_\+crack\+\_\+c2.\+c File Reference}
+\hypertarget{dh__crack__c2_8c}{}\label{dh__crack__c2_8c}\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+
+
+Crack par statistiques des lettres dans la langue anglaise d\textquotesingle{}un fichier donné.  
+
+
+{\ttfamily \#include "{}dh\+\_\+crack.\+h"{}}\newline
+Include dependency graph for dh\+\_\+crack\+\_\+c2.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a8d1f841a8f8c0fa37ddab50b45686422}{dynamic\+\_\+keys\+\_\+allocation}} (byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}keys\+\_\+copy, int nb\+\_\+of\+\_\+keys, int key\+\_\+size)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a4bc5c6152699e9f36774b10e425caad5}{digits\+\_\+init}} (byte digits\mbox{[}$\,$\mbox{]}, int key\+\_\+size)
+\item 
+bool \mbox{\hyperlink{dh__crack__c2_8c_a47aaac455ce430a6290c2a6fe0979fb8}{is\+\_\+eligible\+\_\+char}} (byte c)
+\item 
+int \mbox{\hyperlink{dh__crack__c2_8c_a7d827e30d35208e1ff37341167345d98}{eligible\+\_\+char\+\_\+nb}} (byte char\+\_\+key\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_ab75c1881d6dcd916287ef5779003d5b5}{next\+\_\+digits}} (byte digits\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys, int nb\+\_\+of\+\_\+keys, int \texorpdfstring{$\ast$}{*}tested\+\_\+keys\+\_\+nb)
+\item 
+int \mbox{\hyperlink{dh__crack__c2_8c_a6acd1f24fa84607e935ada19f9e4c609}{keys\+\_\+nb}} (\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_acb9e94b2e52f3cd2b757d469eba57e1a}{key\+\_\+combo\+\_\+recover}} (\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys, byte digits\mbox{[}$\,$\mbox{]}, byte key\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a68b36c77e1bf1e9fbf9bb023d4dbd33d}{freq\+\_\+val\+\_\+init}} (float freq\mbox{[}$\,$\mbox{]})
+\item 
+float \mbox{\hyperlink{dh__crack__c2_8c_a50561758c92bc930148aff013a674d03}{distance\+\_\+calculation}} (float freq\mbox{[}$\,$\mbox{]}, int freq\+\_\+th\mbox{[}$\,$\mbox{]}, int bytes\+\_\+cypher\+\_\+msg\+\_\+nb)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a49deb8f751293236f954c9c1216c9b5b}{occurrence\+\_\+calculation}} (int bytes\+\_\+cypher\+\_\+msg\+\_\+nb, FILE \texorpdfstring{$\ast$}{*}cypher\+\_\+filemsg, byte key\mbox{[}$\,$\mbox{]}, byte alphabet\mbox{[}$\,$\mbox{]}, float freq\mbox{[}$\,$\mbox{]}, int key\+\_\+size)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a6ea28a948676dd1849999f914d25598f}{best\+\_\+key\+\_\+update}} (float \texorpdfstring{$\ast$}{*}best\+\_\+distance, float d, byte best\+\_\+key\mbox{[}$\,$\mbox{]}, byte key\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a410b716d882d0ee8f2fcc9508720592c}{key\+\_\+update}} (int \texorpdfstring{$\ast$}{*}i, float \texorpdfstring{$\ast$}{*}best\+\_\+distance, float d, byte best\+\_\+key\mbox{[}$\,$\mbox{]}, byte key\mbox{[}$\,$\mbox{]}, float score\+\_\+board\mbox{[}$\,$\mbox{]}, byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}keys\+\_\+copy, int key\+\_\+size)
+\item 
+int \mbox{\hyperlink{dh__crack__c2_8c_a9b14a43e7e529e94cadc9f6ed5083218}{ind\+\_\+min}} (float score\+\_\+board\mbox{[}$\,$\mbox{]}, int nb\+\_\+of\+\_\+keys)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a3e6a0b4a13ef6b3b9a7200532395c1bd}{key\+\_\+sort}} (float score\+\_\+board\mbox{[}$\,$\mbox{]}, byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}keys\+\_\+copy, byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}keys\+\_\+board, int nb\+\_\+of\+\_\+keys, int key\+\_\+size)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_ab9a20d0573e970ac499ecc2cc3079228}{c2\+\_\+treatment}} (int nb\+\_\+of\+\_\+keys, FILE \texorpdfstring{$\ast$}{*}cypher\+\_\+filemsg, byte digits\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys, byte key\mbox{[}$\,$\mbox{]}, byte best\+\_\+key\mbox{[}$\,$\mbox{]}, int bytes\+\_\+cypher\+\_\+msg\+\_\+nb, float score\+\_\+board\mbox{[}$\,$\mbox{]}, byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}keys\+\_\+copy, byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}keys\+\_\+board)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_af44b6fb116c7227f65c30e9183e11a65}{c2}} (char cypher\+\_\+filename\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}} keys)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Crack par statistiques des lettres dans la langue anglaise d\textquotesingle{}un fichier donné. 
+
+\begin{DoxyAuthor}{Author}
+Axel Delas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+décembre 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dh__crack__c2_8c_a6ea28a948676dd1849999f914d25598f}\label{dh__crack__c2_8c_a6ea28a948676dd1849999f914d25598f} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!best\_key\_update@{best\_key\_update}}
+\index{best\_key\_update@{best\_key\_update}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{best\_key\_update()}{best\_key\_update()}}
+{\footnotesize\ttfamily void best\+\_\+key\+\_\+update (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{best\+\_\+distance,  }\item[{float}]{d,  }\item[{byte}]{best\+\_\+key\mbox{[}$\,$\mbox{]},  }\item[{byte}]{key\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Mise à jour de la meilleure clé 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em best\+\_\+distance} & Pointeur de la meilleure distance \\
+\hline
+\mbox{\texttt{ in}}  & {\em d} & Nouvelle distance calculée à comparer avec la meilleure distance \\
+\hline
+\mbox{\texttt{ in}}  & {\em best\+\_\+key} & Tableau contenant la chaîne de la meilleure clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Tableau contenant la chaîne de la clé testée\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_af44b6fb116c7227f65c30e9183e11a65}\label{dh__crack__c2_8c_af44b6fb116c7227f65c30e9183e11a65} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!c2@{c2}}
+\index{c2@{c2}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{c2()}{c2()}}
+{\footnotesize\ttfamily void c2 (\begin{DoxyParamCaption}\item[{char}]{cypher\+\_\+filename\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys }\end{DoxyParamCaption})}
+
+Fonction principale du crack C2 sur un fichier donné. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cypher\+\_\+filename} & Tableau contenant le nom du fichier source \\
+\hline
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_ab9a20d0573e970ac499ecc2cc3079228}\label{dh__crack__c2_8c_ab9a20d0573e970ac499ecc2cc3079228} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!c2\_treatment@{c2\_treatment}}
+\index{c2\_treatment@{c2\_treatment}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{c2\_treatment()}{c2\_treatment()}}
+{\footnotesize\ttfamily void c2\+\_\+treatment (\begin{DoxyParamCaption}\item[{int}]{nb\+\_\+of\+\_\+keys,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{cypher\+\_\+filemsg,  }\item[{byte}]{digits\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys,  }\item[{byte}]{key\mbox{[}$\,$\mbox{]},  }\item[{byte}]{best\+\_\+key\mbox{[}$\,$\mbox{]},  }\item[{int}]{bytes\+\_\+cypher\+\_\+msg\+\_\+nb,  }\item[{float}]{score\+\_\+board\mbox{[}$\,$\mbox{]},  }\item[{byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{keys\+\_\+copy,  }\item[{byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{keys\+\_\+board }\end{DoxyParamCaption})}
+
+Algorithme de crack C2 sur un tableau contenant le message chiffré 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nb\+\_\+of\+\_\+keys} & Nombre de clé à tester \\
+\hline
+\mbox{\texttt{ in}}  & {\em cypher\+\_\+filemsg} & Fichier contenant le message chiffré \\
+\hline
+\mbox{\texttt{ in}}  & {\em digits} & Tableau contenant la chaîne des digits \\
+\hline
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Tableau contenant la chaîne de la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em best\+\_\+key} & Tableau contenant la chaîne de la meilleure clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes\+\_\+cypher\+\_\+msg\+\_\+nb} & Nombre d\textquotesingle{}octets du message chiffré \\
+\hline
+\mbox{\texttt{ in}}  & {\em score\+\_\+board} & Tableau contenant les scores de toutes les clés testées \\
+\hline
+\mbox{\texttt{ in}}  & {\em keys\+\_\+copy} & Tableau contenant les chaînes de toutes les clés testées \\
+\hline
+\mbox{\texttt{ in}}  & {\em keys\+\_\+board} & Tableau contenant les chaînes de toutes les clés testées dans l\textquotesingle{}ordre décroissant des scores\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_a4bc5c6152699e9f36774b10e425caad5}\label{dh__crack__c2_8c_a4bc5c6152699e9f36774b10e425caad5} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!digits\_init@{digits\_init}}
+\index{digits\_init@{digits\_init}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{digits\_init()}{digits\_init()}}
+{\footnotesize\ttfamily void digits\+\_\+init (\begin{DoxyParamCaption}\item[{byte}]{digits\mbox{[}$\,$\mbox{]},  }\item[{int}]{key\+\_\+size }\end{DoxyParamCaption})}
+
+Initialisation des digits associés à la taille de la clé. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em digits} & Tableau contenant la chaîne des digits \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+size} & Taille de la clé\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_a50561758c92bc930148aff013a674d03}\label{dh__crack__c2_8c_a50561758c92bc930148aff013a674d03} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!distance\_calculation@{distance\_calculation}}
+\index{distance\_calculation@{distance\_calculation}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{distance\_calculation()}{distance\_calculation()}}
+{\footnotesize\ttfamily float distance\+\_\+calculation (\begin{DoxyParamCaption}\item[{float}]{freq\mbox{[}$\,$\mbox{]},  }\item[{int}]{freq\+\_\+th\mbox{[}$\,$\mbox{]},  }\item[{int}]{bytes\+\_\+cypher\+\_\+msg\+\_\+nb }\end{DoxyParamCaption})}
+
+Calcul de la distance entre deux tableaux freq et freq\+\_\+th 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em freq} & Tableau contenant les valeurs des fréquences mesurées pour une clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em freq\+\_\+th} & Tableau contenant les valeurs des fréquences théoriques en anglais \\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes\+\_\+cypher\+\_\+msg\+\_\+nb} & Nombre d\textquotesingle{}octets du message chiffré \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre flottant qui représente le score de la clé testée
+\end{DoxyReturn}
+\Hypertarget{dh__crack__c2_8c_a8d1f841a8f8c0fa37ddab50b45686422}\label{dh__crack__c2_8c_a8d1f841a8f8c0fa37ddab50b45686422} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!dynamic\_keys\_allocation@{dynamic\_keys\_allocation}}
+\index{dynamic\_keys\_allocation@{dynamic\_keys\_allocation}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{dynamic\_keys\_allocation()}{dynamic\_keys\_allocation()}}
+{\footnotesize\ttfamily void dynamic\+\_\+keys\+\_\+allocation (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{keys\+\_\+copy,  }\item[{int}]{nb\+\_\+of\+\_\+keys,  }\item[{int}]{key\+\_\+size }\end{DoxyParamCaption})}
+
+Allocation dynamique pour le tableau des clés 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em keys\+\_\+copy} & Tableau des clés \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+\_\+of\+\_\+keys} & Nombre de clés à tester \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+size} & Taille de la clé\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_a7d827e30d35208e1ff37341167345d98}\label{dh__crack__c2_8c_a7d827e30d35208e1ff37341167345d98} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!eligible\_char\_nb@{eligible\_char\_nb}}
+\index{eligible\_char\_nb@{eligible\_char\_nb}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{eligible\_char\_nb()}{eligible\_char\_nb()}}
+{\footnotesize\ttfamily int eligible\+\_\+char\+\_\+nb (\begin{DoxyParamCaption}\item[{byte}]{char\+\_\+key\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Nombre de caractères admissibles associé au digit 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char\+\_\+key} & Tableau contenant les caractères associé au digit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre de caractères admissibles
+\end{DoxyReturn}
+\Hypertarget{dh__crack__c2_8c_a68b36c77e1bf1e9fbf9bb023d4dbd33d}\label{dh__crack__c2_8c_a68b36c77e1bf1e9fbf9bb023d4dbd33d} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!freq\_val\_init@{freq\_val\_init}}
+\index{freq\_val\_init@{freq\_val\_init}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{freq\_val\_init()}{freq\_val\_init()}}
+{\footnotesize\ttfamily void freq\+\_\+val\+\_\+init (\begin{DoxyParamCaption}\item[{float}]{freq\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Initialisation des valeurs de freq 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em freq} & Tableau contenant les valeurs des fréquences mesurées pour une clé\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_a9b14a43e7e529e94cadc9f6ed5083218}\label{dh__crack__c2_8c_a9b14a43e7e529e94cadc9f6ed5083218} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!ind\_min@{ind\_min}}
+\index{ind\_min@{ind\_min}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{ind\_min()}{ind\_min()}}
+{\footnotesize\ttfamily int ind\+\_\+min (\begin{DoxyParamCaption}\item[{float}]{score\+\_\+board\mbox{[}$\,$\mbox{]},  }\item[{int}]{nb\+\_\+of\+\_\+keys }\end{DoxyParamCaption})}
+
+Cherche l\textquotesingle{}indice du score le plus petit 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em score\+\_\+board} & Tableau contenant les scores de toutes les clés testées \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+\_\+of\+\_\+keys} & Nombre de clés à tester \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Indice du score le plus petit
+\end{DoxyReturn}
+\Hypertarget{dh__crack__c2_8c_a47aaac455ce430a6290c2a6fe0979fb8}\label{dh__crack__c2_8c_a47aaac455ce430a6290c2a6fe0979fb8} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!is\_eligible\_char@{is\_eligible\_char}}
+\index{is\_eligible\_char@{is\_eligible\_char}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{is\_eligible\_char()}{is\_eligible\_char()}}
+{\footnotesize\ttfamily bool is\+\_\+eligible\+\_\+char (\begin{DoxyParamCaption}\item[{byte}]{c }\end{DoxyParamCaption})}
+
+Vérification de si l\textquotesingle{}octet donné fait parti de la liste des caractères d\textquotesingle{}une clé 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Octet à tester \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vrai ou faux
+\end{DoxyReturn}
+\Hypertarget{dh__crack__c2_8c_acb9e94b2e52f3cd2b757d469eba57e1a}\label{dh__crack__c2_8c_acb9e94b2e52f3cd2b757d469eba57e1a} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!key\_combo\_recover@{key\_combo\_recover}}
+\index{key\_combo\_recover@{key\_combo\_recover}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{key\_combo\_recover()}{key\_combo\_recover()}}
+{\footnotesize\ttfamily void key\+\_\+combo\+\_\+recover (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys,  }\item[{byte}]{digits\mbox{[}$\,$\mbox{]},  }\item[{byte}]{key\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Composition d\textquotesingle{}une clé avec les digits 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés \\
+\hline
+\mbox{\texttt{ in}}  & {\em digits} & Tableau contenant la chaîne des digits \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Tableau contenant la chaîne clé\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_a3e6a0b4a13ef6b3b9a7200532395c1bd}\label{dh__crack__c2_8c_a3e6a0b4a13ef6b3b9a7200532395c1bd} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!key\_sort@{key\_sort}}
+\index{key\_sort@{key\_sort}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{key\_sort()}{key\_sort()}}
+{\footnotesize\ttfamily void key\+\_\+sort (\begin{DoxyParamCaption}\item[{float}]{score\+\_\+board\mbox{[}$\,$\mbox{]},  }\item[{byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{keys\+\_\+copy,  }\item[{byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{keys\+\_\+board,  }\item[{int}]{nb\+\_\+of\+\_\+keys,  }\item[{int}]{key\+\_\+size }\end{DoxyParamCaption})}
+
+Algorithme récursif du tri rapide 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em score\+\_\+board} & Tableau contenant les scores de toutes les clés testées \\
+\hline
+\mbox{\texttt{ in}}  & {\em first\+\_\+ind} & Premier du début \\
+\hline
+\mbox{\texttt{ in}}  & {\em last\+\_\+ind} & Indice de fin \\
+\hline
+\mbox{\texttt{ in}}  & {\em keys\+\_\+copy} & Tableau contenant les chaînes de toutes les clés testées \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+size} & Taille de la clé\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_a410b716d882d0ee8f2fcc9508720592c}\label{dh__crack__c2_8c_a410b716d882d0ee8f2fcc9508720592c} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!key\_update@{key\_update}}
+\index{key\_update@{key\_update}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{key\_update()}{key\_update()}}
+{\footnotesize\ttfamily void key\+\_\+update (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{i,  }\item[{float \texorpdfstring{$\ast$}{*}}]{best\+\_\+distance,  }\item[{float}]{d,  }\item[{byte}]{best\+\_\+key\mbox{[}$\,$\mbox{]},  }\item[{byte}]{key\mbox{[}$\,$\mbox{]},  }\item[{float}]{score\+\_\+board\mbox{[}$\,$\mbox{]},  }\item[{byte \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{keys\+\_\+copy,  }\item[{int}]{key\+\_\+size }\end{DoxyParamCaption})}
+
+Mise à jour de la meilleure distance en fonction des résultats de la clé actuelle 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & Pointeur indice de la clé testée \\
+\hline
+\mbox{\texttt{ in}}  & {\em best\+\_\+distance} & Pointeur de la meilleure distance \\
+\hline
+\mbox{\texttt{ in}}  & {\em d} & Nouvelle distance calculée à comparer avec la meilleure distance \\
+\hline
+\mbox{\texttt{ in}}  & {\em best\+\_\+key} & Tableau contenant la chaîne de la meilleure clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Tableau contenant la chaîne de la clé testée \\
+\hline
+\mbox{\texttt{ in}}  & {\em score\+\_\+board} & Tableau contenant les scores de toutes les clés testées \\
+\hline
+\mbox{\texttt{ in}}  & {\em keys\+\_\+copy} & Tableau contenant les chaînes de toutes les clés testées \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+size} & Taille de la clé\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_a6acd1f24fa84607e935ada19f9e4c609}\label{dh__crack__c2_8c_a6acd1f24fa84607e935ada19f9e4c609} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!keys\_nb@{keys\_nb}}
+\index{keys\_nb@{keys\_nb}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{keys\_nb()}{keys\_nb()}}
+{\footnotesize\ttfamily int keys\+\_\+nb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys }\end{DoxyParamCaption})}
+
+Nombre de clés à tester 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre de clés à tester
+\end{DoxyReturn}
+\Hypertarget{dh__crack__c2_8c_ab75c1881d6dcd916287ef5779003d5b5}\label{dh__crack__c2_8c_ab75c1881d6dcd916287ef5779003d5b5} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!next\_digits@{next\_digits}}
+\index{next\_digits@{next\_digits}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{next\_digits()}{next\_digits()}}
+{\footnotesize\ttfamily void next\+\_\+digits (\begin{DoxyParamCaption}\item[{byte}]{digits\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{structt__tab__keys}{t\+\_\+tab\+\_\+keys}}}]{keys,  }\item[{int}]{nb\+\_\+of\+\_\+keys,  }\item[{int \texorpdfstring{$\ast$}{*}}]{tested\+\_\+keys\+\_\+nb }\end{DoxyParamCaption})}
+
+Digits suivants 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em digits} & Tableau contenant la chaîne des digits \\
+\hline
+\mbox{\texttt{ in}}  & {\em keys} & Structure des clés \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+\_\+of\+\_\+keys} & Nombre de clés à tester \\
+\hline
+\mbox{\texttt{ in}}  & {\em tested\+\_\+keys\+\_\+nb} & Pointeur du nombre de clés qui ont déjà été testé\\
+\hline
+\end{DoxyParams}
+\Hypertarget{dh__crack__c2_8c_a49deb8f751293236f954c9c1216c9b5b}\label{dh__crack__c2_8c_a49deb8f751293236f954c9c1216c9b5b} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!occurrence\_calculation@{occurrence\_calculation}}
+\index{occurrence\_calculation@{occurrence\_calculation}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{occurrence\_calculation()}{occurrence\_calculation()}}
+{\footnotesize\ttfamily void occurrence\+\_\+calculation (\begin{DoxyParamCaption}\item[{int}]{bytes\+\_\+cypher\+\_\+msg\+\_\+nb,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{cypher\+\_\+filemsg,  }\item[{byte}]{key\mbox{[}$\,$\mbox{]},  }\item[{byte}]{alphabet\mbox{[}$\,$\mbox{]},  }\item[{float}]{freq\mbox{[}$\,$\mbox{]},  }\item[{int}]{key\+\_\+size }\end{DoxyParamCaption})}
+
+Calcul du nombre d\textquotesingle{}occurence de chaque lettre pour une clé 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bytes\+\_\+cypher\+\_\+msg\+\_\+nb} & Nombre d\textquotesingle{}octets du message chiffré \\
+\hline
+\mbox{\texttt{ in}}  & {\em cypher\+\_\+filemsg} & Fichier contenant le message chiffré \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Tableau contenant la chaîne de la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em alphabet} & Tableau contenant les caractères de l\textquotesingle{}alphabet anglais \\
+\hline
+\mbox{\texttt{ in}}  & {\em freq} & Tableau contenant les valeurs des fréquences pour une clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+size} & Taille de la clé\\
+\hline
+\end{DoxyParams}
