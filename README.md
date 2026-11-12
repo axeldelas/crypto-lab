@@ -1,17 +1,56 @@
-# CryptoLab - Symmetric Encryption
+# CryptoLab
 
-A cryptography toolkit developed in C as part of my Bachelor's degree and one of my first cybersecurity and systems programming projects.
+## :book: Overview
 
-## :book: Objective
+Implementation of cryptographic mechanisms in C covering symmetric encryption, Diffie-Hellman key exchange, and cryptanalysis techniques.
 
-Explore fundamental cryptography concepts through the implementation of encryption, decryption, and data protection mechanisms.
+## :man_technologist: Skills Demonstrated
 
-## :hammer_and_wrench: Programming
+- C Programming
+- Cryptography Fundamentals
+- Cryptographic Protocol Design
+- Algorithm Development
+- Troubleshooting
 
-- C
-- Memory Management
-- File Processing
-- Algorithm Implementation
+## :camera: Screenshots
+
+### Part 1 - Symmetric Encryption
+
+#### XOR Message Encryption
+
+Demonstration of message encryption using the XOR algorithm.
+
+![XOR Message Encryption](screenshots/xor-message-encryption-test.png)
+
+#### XOR Image Encryption
+
+Demonstration of image encryption using the XOR algorithm.
+
+![XOR Image Encryption](screenshots/xor-image-encryption-test.png)
+
+#### CBC Message Encryption
+
+Demonstration of message encryption using CBC mode.
+
+![CBC Message Encryption](screenshots/cbc-message-encryption-test.png)
+
+#### CBC Image Encryption
+
+Demonstration of image encryption using CBC mode.
+
+![CBC Image Encryption](screenshots/cbc-image-encryption-test.png)
+
+### Part 2 - Diffie-Hellman Key Exchange
+
+Generation of a shared secret key using the Diffie-Hellman protocol.
+
+![Diffie-Hellman Common Key](screenshots/dh-common-key-generated-test.png)
+
+### Part 3 - Cryptanalysis
+
+Recovery of the XOR encryption key through cryptanalysis techniques.
+
+![XOR Key Recovery](screenshots/xor-crack-key-test.png)
 
 ## :gear: Technologies
 
@@ -22,24 +61,14 @@ Explore fundamental cryptography concepts through the implementation of encrypti
 
 ## :closed_lock_with_key: Features
 
-- Data Encryption
-- Data Decryption
-- File Processing
-- Key Management
-- Data Protection Mechanisms
+- XOR Encryption & Decryption
+- CBC Encryption & Decryption
+- Diffie-Hellman Key Exchange
+- Key Recovery through Cryptanalysis
+- File Encryption
+- Image Encryption
 
-## :man_technologist: Skills Demonstrated
-
-- C Programming
-- Cryptography Fundamentals
-- Systems Programming
-- Algorithm Design
-- Problem Solving
 
 ## :books: Documentation
 
-Additional project documentation is available in the `/docs` folder.
-
-## :camera: Screenshots
-
-See the `/screenshots` folder.
+Additional project documentation, including the project specification, planning deliverables, and lessons learned, is available in the /docs folder.
